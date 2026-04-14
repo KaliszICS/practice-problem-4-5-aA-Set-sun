@@ -23,16 +23,16 @@ public class PracticeProblem {
 		int space = 0;
 
 		for (int i = 0; i < num; i++) {
-			for (int n = i; n < num; n++) {
-				space++;
-				while spaces 
-				spaces = spaces + space;
-				spaces = spaces.replaceAll(spaces, " ");
 
+			for (int j = num - 1; j > i - 1; j--) {
+                System.out.print(" ");
+			}
+			
+			for (int n = i; n < num; n++) {
 			}
 			System.out.println(result);
 			
-			result = spaces + result + " " + '*';		
+			result = result + "* ";		
 		}
 		return result;
 
