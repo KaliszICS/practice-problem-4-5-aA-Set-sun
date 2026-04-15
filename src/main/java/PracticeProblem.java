@@ -8,7 +8,7 @@ public class PracticeProblem {
 
 	public static void main(String args[]) {
 
-		System.out.println(triangle(5));
+		//System.out.println(triangle(3));
 		System.out.println(pyramid(4));
 
 	}
@@ -16,41 +16,44 @@ public class PracticeProblem {
 	public static String triangle (int num) {
 		String result = "";
 
-		for (int i = 0; i < num; i++) {
-			System.out.println(result); 
-			result = result + '*';			
+		for (int i = 1; i <= num; i++) {
+			for (int asteriks = 0; asteriks < i; asteriks++) {
+				result = result + "*";			
+			}
+			result = result + "\n";
 		}
 		return result;
 	}
 
 	public static String pyramid (int num) {
 		String result = "";
-		String spaces = " ";
 		int space = 0;
 
 		for (int i = 0; i < num; i++) {
+			for (int n = num - i; n > 1; n--) { //for spaces -> start before num
+                result = result + " ";
+			}
 
-			for (int j = num - 1; j > i - 1; j--) { //start before num, 
-                System.out.print(" ");
+			for (int n = 0; n <= i; n++) { //asteriks
+				result = result + "*";
+				if (i > 1) {
+					result = result + "* ";
+				}
 			}
-			
-			for (int n = i; n < num; n++) {
-			}
-			System.out.println(result);
-			
-			result = result + "* ";		
+			result = result + "\n";
 		}
-		return result + "\n";
-
-			
+		return result.stripTrailing() + "\n";
 	}
 
-	public static String multiplicationTable (int num) {
-
-		for (int i = 0; i < num; i++) {
 			
-		}
-	}
+}
+
+	//public static String multiplicationTable (int num) {
+
+	//	for (int i = 0; i < num; i++) {
+			
+	//	}
+	//}
 	
 		
-}
+
