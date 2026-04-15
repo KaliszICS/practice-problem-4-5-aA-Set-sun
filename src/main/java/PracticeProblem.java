@@ -1,8 +1,14 @@
+/* Title: Counters, Accumulators, and Nesting 4.5
+Name: Angie
+Date Created: April 14, 2026
+Date Updated: April 15, 2026
+*/
+
 public class PracticeProblem {
 
 	public static void main(String args[]) {
 
-		System.out.println(triangle(3));
+		System.out.println(triangle(5));
 		System.out.println(pyramid(4));
 
 	}
@@ -24,7 +30,7 @@ public class PracticeProblem {
 
 		for (int i = 0; i < num; i++) {
 
-			for (int j = num - 1; j > i - 1; j--) {
+			for (int j = num - 1; j > i - 1; j--) { //start before num, 
                 System.out.print(" ");
 			}
 			
@@ -34,7 +40,7 @@ public class PracticeProblem {
 			
 			result = result + "* ";		
 		}
-		return result;
+		return result.stripTrailing() + "\n";
 
 			
 	}
