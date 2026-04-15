@@ -40,9 +40,16 @@ public class PracticeProblem {
 			
 			result = result + "* ";		
 		}
-		return result.stripTrailing() + "\n";
+		return result + "\n";
 
 			
+	}
+
+	public static String multiplicationTable (int num) {
+
+		for (int i = 0; i < num; i++) {
+			
+		}
 	}
 	
 		
