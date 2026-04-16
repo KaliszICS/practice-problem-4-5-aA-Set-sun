@@ -27,33 +27,36 @@ public class PracticeProblem {
 
 	public static String pyramid (int num) {
 		String result = "";
-		int space = 0;
 
 		for (int i = 0; i < num; i++) {
-			for (int n = num - i; n > 1; n--) { //for spaces -> start before num
-                result = result + " ";
-			}
 
-			for (int n = 0; n <= i; n++) { //asteriks
-				result = result + "*";
-				if (i > 1) {
-					result = result + "* ";
-				}
-			}
-			result = result + "\n";
-		}
-		return result.stripTrailing() + "\n";
+            for (int j = num - i; j > 1; j--) { //for spaces
+                result = result + " ";
+            }
+
+            for (int j = 0; j <= i; j++) { //for asteriks
+				if (i < 1) { //if it's only one
+					result = result + "*";
+				} //else -> add a gap
+                else {result = result + "* ";}
+
+            }
+			result = result.stripTrailing() + "\n"; //trims the last one before next line
+            
+        }
+		return result;
 	}
 
+
+	public static String multiplicationTable (int num) {
+
+		String table = 
+		for (int i = 0; i < num; i++) {
 			
+		}	
+	}
+
 }
-
-	//public static String multiplicationTable (int num) {
-
-	//	for (int i = 0; i < num; i++) {
-			
-	//	}
-	//}
 	
 		
 
