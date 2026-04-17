@@ -51,13 +51,15 @@ public class PracticeProblem {
 	public static String multiplicationTable (int num) {
 
 		String table = "";
+		int b = 1;
 
 		for (int i = 1; i <= num; i++) {
-			for (int b = 1; b <= num; b++) { //column
-				if (b == i) {
-					table = table.stripLeading() + " " + (i * b);
+			for (b = 1; b <= num; b++) { //column
+				table = table + (i * b);
+
+				if (!(b == num)) { //if it's not the #, add a space
+					table = table + " ";
 				} 
-				else {table = table + " " + (i * b);}
 
 			}
 			table = table + "\n";
